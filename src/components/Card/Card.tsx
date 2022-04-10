@@ -27,7 +27,6 @@ export const Card: FC<CardProps> = ({
 
   return (
     <div className="bg-zinc-100 p-6 w-[30rem] h-min my-10 rounded-xl flex-col items-center justify-center">
-      {/* <h4 className="font-normal text-l mb-2 underline">ID: {id}</h4> */}
       <h4 className="font-bold text-2xl mb-2">{from}</h4>
       <p className="my-2">Sent Date: {sent_date}</p>
       <p className="my-2">Subject: {subject}</p>
