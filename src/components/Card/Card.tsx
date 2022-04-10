@@ -8,7 +8,7 @@ interface CardProps {
   sent_date: string;
   is_unread: boolean;
   subject: string;
-  snippet?: string;
+  snippet: string;
 }
 
 export const Card: FC<CardProps> = ({

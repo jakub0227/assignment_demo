@@ -4,5 +4,5 @@ export interface ListItem {
   sent_date: string;
   is_unread: boolean;
   subject: string;
-  snippet?: string;
+  snippet: string;
 }
