@@ -1,14 +1,12 @@
-import { data } from "autoprefixer";
 import create from "zustand";
 import { ListItem } from "../types/ListItem";
 
 interface StoreStateProps {
-  is_unread: boolean;
   data: ListItem[];
   toggleCheckBox: (id: number) => void;
 }
+
 export const useStore = create<StoreStateProps>((set) => ({
-  is_unread: true,
   data: [
     {
       id: 100795229,
