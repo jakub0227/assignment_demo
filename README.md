@@ -17,4 +17,4 @@ npm i
 
 ## Demo
 
-https://assignment-demo-clhmds3py-jakub0227.vercel.app/
+https://heroic-muffin-b76f17.netlify.app/
