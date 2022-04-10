@@ -26,7 +26,7 @@ export const Card: FC<CardProps> = ({
   };
 
   return (
-    <div className="bg-zinc-100 p-6 w-[30rem] h-min my-10 rounded-xl flex-col items-center justify-center">
+    <div className="p-8 w-96 my-4 rounded-3xl bg-gray-100 transition duration-200 ease-in-out hover:scale-105 hover:drop-shadow-2xl">
       <h4 className="font-bold text-2xl mb-2">{from}</h4>
       <p className="my-2">Sent Date: {sent_date}</p>
       <p className="my-2">Subject: {subject}</p>
@@ -54,7 +54,7 @@ export const Card: FC<CardProps> = ({
         </button>
         <input
           type="checkbox"
-          className="rounded form-checkbox h-5 w-5"
+          className="rounded form-checkbox h-5 w-5 cursor-pointer"
           defaultChecked={is_unread}
           onChange={() => toggleCheckBox(id)}
         />

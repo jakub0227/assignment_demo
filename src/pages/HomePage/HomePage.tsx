@@ -10,8 +10,8 @@ export const HomePage: FC = () => {
   return (
     <>
       <h1 className="text-4xl mt-10 text-zinc-100">Items Total: {total}</h1>
-      <h1 className="text-4xl mt-10 text-zinc-100">
-        Active Total: {activeSelect.length}
+      <h1 className="text-4xl my-5 text-slate-200">
+        Active: {activeSelect.length}
       </h1>
       {data.map((el) => (
         <Card

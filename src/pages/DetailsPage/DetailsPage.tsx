@@ -10,8 +10,8 @@ export const DetailsPage: FC = () => {
 
   const foundDetail = data.find((el) => el.id.toString() === id);
   return (
-    <div className="bg-zinc-100 p-6 w-[28rem] h-min my-10 rounded-xl flex-col">
-      <h5 className="text-xl mt-10 ">
+    <div className="bg-zinc-100 p-6 h-min my-10 rounded-xl flex-col">
+      <h5 className="text-xl mt-5 ">
         <span className="font-bold">Details of ID: </span>
         {foundDetail?.id}
       </h5>
