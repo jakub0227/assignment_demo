@@ -14,3 +14,7 @@ npm i
 - **Tailwind CSS 3.0**
 - **Typescript**
 - **Zustand**
+
+## Demo
+
+https://assignment-demo-clhmds3py-jakub0227.vercel.app/
