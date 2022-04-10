@@ -1,9 +1,11 @@
+import { data } from "autoprefixer";
 import create from "zustand";
 import { ListItem } from "../types/ListItem";
 
 interface StoreStateProps {
   is_unread: boolean;
   data: ListItem[];
+  toggleCheckBox: (id: number) => void;
 }
 export const useStore = create<StoreStateProps>((set) => ({
   is_unread: true,
@@ -25,9 +27,12 @@ export const useStore = create<StoreStateProps>((set) => ({
       snippet: "Odbierz 50% rabatu na wymianę online",
     },
   ],
-  setIsUnread: (is_unread: boolean) =>
+  toggleCheckBox: (id) =>
     set((state) => ({
-      ...state,
-      is_unread,
+      data: state.data.map((item) =>
+        item.id === id
+          ? ({ ...item, is_unread: !item.is_unread } as ListItem)
+          : item
+      ),
     })),
 }));

@@ -5,10 +5,15 @@ import { useStore } from "../../zustand/store";
 export const HomePage: FC = () => {
   const data = useStore((state) => state.data);
   const total = data.length;
+  const activeSelect = data.filter((el) => el.is_unread === true);
+  console.log(activeSelect);
 
   return (
     <>
       <h1 className="text-4xl mt-10 text-zinc-100">Items Total: {total}</h1>
+      <h1 className="text-4xl mt-10 text-zinc-100">
+        {/* Active Total: {activeSelect} */}
+      </h1>
       {data.map((el) => (
         <Card
           key={el.id}

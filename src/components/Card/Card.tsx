@@ -1,5 +1,6 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
+import { useStore } from "../../zustand/store";
 
 interface CardProps {
   id: number;
@@ -18,20 +19,19 @@ export const Card: FC<CardProps> = ({
   subject,
   snippet,
 }) => {
-  
-  const [checked, setChecked] = useState(is_unread);
-  let navigate = useNavigate();
+  const toggleCheckBox = useStore((state) => state.toggleCheckBox);
+  const navigate = useNavigate();
   const handleRedirectToDetails = () => {
     navigate(`/${id}`);
   };
 
   return (
     <div className="bg-zinc-100 p-6 w-[30rem] h-min my-10 rounded-xl flex-col items-center justify-center">
-      <h4 className="font-normal text-l mb-2 underline">ID: {id}</h4>
-      <h4 className="font-bold text-xl mb-2">{from}</h4>
+      {/* <h4 className="font-normal text-l mb-2 underline">ID: {id}</h4> */}
+      <h4 className="font-bold text-2xl mb-2">{from}</h4>
       <p className="my-2">Sent Date: {sent_date}</p>
       <p className="my-2">Subject: {subject}</p>
-      {snippet && <p className="font-bold text-l mt-6">{snippet}</p>}
+      {snippet && <p className="font-bold text-l mt-10">{snippet}</p>}
       <div className="flex justify-between items-center mt-4">
         <button
           className="bg-red-600 text-white font-semibold py-2 px-5 text-sm inline-flex items-center group rounded-3xl"
@@ -56,8 +56,8 @@ export const Card: FC<CardProps> = ({
         <input
           type="checkbox"
           className="rounded form-checkbox h-5 w-5"
-          defaultChecked={checked}
-          onChange={() => setChecked(!checked)}
+          defaultChecked={is_unread}
+          onChange={() => toggleCheckBox(id)}
         />
       </div>
     </div>
