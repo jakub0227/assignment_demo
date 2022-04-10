@@ -6,3 +6,5 @@ export interface ListItem {
   subject: string;
   snippet: string;
 }
+
+export type ListItemData = ListItem[];

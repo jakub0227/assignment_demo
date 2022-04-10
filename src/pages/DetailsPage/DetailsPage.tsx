@@ -1,10 +1,10 @@
 import { FC } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useStore } from "../../zustand/store";
 
 export const DetailsPage: FC = () => {
   let { id } = useParams<string>();
-
+  const navigate = useNavigate();
   const data = useStore((state) => state.data);
   if (id === undefined) return null;
 
@@ -24,6 +24,12 @@ export const DetailsPage: FC = () => {
         {foundDetail?.subject}
       </h5>
       <h5 className="text-xl mt-5 italic">{foundDetail?.snippet}</h5>
+      <button
+        className="bg-blue-500 text-white font-semibold py-2 px-5 text-sm inline-flex items-center group rounded-3xl"
+        onClick={() => navigate("/")}
+      >
+        <p> BACK </p>
+      </button>
     </div>
   );
 };

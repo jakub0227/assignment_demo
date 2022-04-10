@@ -3,6 +3,7 @@ import { ListItem } from "../types/ListItem";
 
 interface StoreStateProps {
   data: ListItem[];
+
   toggleCheckBox: (id: number) => void;
 }
 
