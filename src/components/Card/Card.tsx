@@ -26,11 +26,11 @@ export const Card: FC<CardProps> = ({
   };
 
   return (
-    <div className="p-8 w-96 my-4 rounded-3xl bg-gray-100 transition duration-200 ease-in-out hover:scale-105 hover:drop-shadow-2xl">
+    <div className="p-6 max-w-screen-xs my-6 rounded-3xl bg-gray-200">
       <h4 className="font-bold text-2xl mb-2">{from}</h4>
       <p className="my-2">Sent Date: {sent_date}</p>
       <p className="my-2">Subject: {subject}</p>
-      {snippet && <p className="font-bold text-l mt-10">{snippet}</p>}
+      {snippet && <p className="font-bold text-l mt-5">{snippet}</p>}
       <div className="flex justify-between items-center mt-4">
         <button
           className="bg-red-600 text-white font-semibold py-2 px-5 text-sm inline-flex items-center group rounded-3xl"

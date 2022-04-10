@@ -8,7 +8,7 @@ export const HomePage: FC = () => {
   const activeSelect = data.filter((el) => el.is_unread === true);
 
   return (
-    <>
+    <div className="sm: px-10">
       <h1 className="text-4xl mt-10 text-zinc-100">Items Total: {total}</h1>
       <h1 className="text-4xl my-5 text-slate-200">
         Active: {activeSelect.length}
@@ -24,6 +24,6 @@ export const HomePage: FC = () => {
           snippet={el.snippet}
         />
       ))}
-    </>
+    </div>
   );
 };
