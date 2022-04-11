@@ -1,5 +1,9 @@
 # Assignment task
 
+## Prerequisites
+
+> Node v17.4.0
+
 ## Installation
 
 ```bash
